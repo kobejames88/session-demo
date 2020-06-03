@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<script>
+
+    function f() {
+        var x = document.forms["myForm"]["name"].value;
+        //验证是否为空
+        if (x == null || x == "") {
+            alert("名字不能为空!");
+        }
+    }
+</script>
+<body>
+
+<h1 align="center">Webburget Login</h1>
+<hr>
+<div align="center">
+    <form action="/login" method="post" name="myForm">
+        用户名:<input name="name"/><br>
+        密&nbsp;&nbsp;&nbsp;码:<input name="pwd"><br/>
+        <!--<input type="checkbox" name="remeber"> 记住我<br/>-->
+        <input type="submit" value="Login" onclick="f()">
+    </form>
+</div>
+</body>
+</html>
